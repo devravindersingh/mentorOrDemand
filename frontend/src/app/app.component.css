@@ -1,0 +1,131 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+#upperPart {
+    display: flex;
+    flex-direction: row;
+    flex: 20;
+    background: black;
+}
+
+    #guestPart {
+        display: flex;
+        flex-direction: column;
+        flex: 3;
+        background: #0099F7;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to top, #F11712, #0099F7);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to top, #F11712, #0099F7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+         /* background-image: url("../assets/landingPageBg.jpg");
+        background-size: cover; */
+        /* filter: blur(2px);
+        -webkit-filter: blur(2px); */
+
+        transition: 2s flex;
+        transition-timing-function: linear;
+    }
+
+    #guestPart:hover {
+        flex: 100;
+    }
+
+        #welcomeInfo{
+            display: flex;
+            flex-direction: column;
+            flex: 2;
+            justify-content: center;
+            text-align: center;
+            font-size: 2em;
+            padding: 2%;
+            color: aliceblue;
+            /* background: orange; */
+        }
+
+        #searchBoxPart {
+            display: flex;
+            flex-direction: row;
+            flex: 3;
+            justify-content: flex-start;
+            /* background: violet; */
+        }
+            #searchContent{
+                display: flex;
+                flex: 1;
+                justify-content: space-evenly;
+                align-items: center;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 2em;
+                padding: 2%;
+            }
+                #technologySpace {
+                    flex: 3;
+                    background-color: white;
+                    border-radius: 5px solid white;
+                }
+
+                #timeSlotSpace {
+                    flex: 2;
+                    background-color: rgb(182, 75, 4);
+                    border-radius: 1px solid rgb(182, 75, 4);
+                }
+
+                #searchButton {
+                    flex: 1;
+                    background-color: rgb(136, 57, 226);
+                    border-radius: 1px solid rgb(136, 57, 226);
+                }
+        
+        #searchedContent {
+            background-color: pink;
+            /* height: 800px; */
+            overflow-y: scroll;
+        }
+
+
+    #studentPart {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        background: yellowgreen;
+    }
+        #imageSPart{
+            flex: 2;
+            background:brown;
+            background-image: url("../assets/studentImg.jpg");
+            background-size: cover;
+        }
+
+        #textSPart {
+            flex: 1;
+            background: rgb(90,119,152)
+        }
+
+    #mentorPart {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        background: red;
+    }
+        #imageMPart{
+            flex: 2;
+            background:brown;
+            background-image: url("../assets/mentorImg.jpg");
+            background-size: cover;
+            
+        }
+
+        #textMPart {
+            flex: 1;
+            background:rgb(35,35,38);
+        }
+
+#lowerPart {
+    display: flex;
+    flex: 1;
+    background: blue;
+}
+
