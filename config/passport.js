@@ -6,9 +6,10 @@ const Mentor = require('../models/mentor');
 
 module.exports = function(passport){
     let opts = {};
-    opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
+    opts.jwtFromRequest = ExtractJwt.fromAuthHeaderWithScheme("jwt");
     opts.secretOrKey = config.secret;
     passport.use( new JwtStrategy(opts, (jwt_payload, done)=> {
+        console.log(jwt_payload);
         Student.findById(jwt_payload._id, (err, student)=>{
             if(err){
                 return done(err,false);

@@ -49,8 +49,7 @@ module.exports.getStudentById = function(id, callback){
 }
 
 module.exports.getStudentByUsername = function(username, callback){
-    const query = {email: username}
-    console.log('its here');
+    const query = {email: username};
     student.findOne(query, callback);
 }
 

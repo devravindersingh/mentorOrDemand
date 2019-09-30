@@ -19,13 +19,10 @@ router.post('/login',(req,res,next)=>{
                 msg : 'User not found',
             })
         }
-        console.log(user);
-        console.log('test 2');
         student.comparePassword(password, user.password, (err, isMatch)=>{
             if(err) throw err;
-            console.log('test 3');
             if(isMatch){
-                const token = jwt.sign(user, config.secret, {
+                const token = jwt.sign(user.toJSON(), config.secret, {
                     expiresIn: 14400 //4hours
                 })
                 res.json({
@@ -77,8 +74,8 @@ router.post('/register',(req,res,next)=>{
 });
 
 //profile
-router.get('/profile',(req,res,next)=>{
-    res.send('profile');
+router.get('/profile',passport.authenticate('jwt', {session: false}),(req,res,next)=>{
+    res.json({user: req.user});
 })
 
 //editing data
