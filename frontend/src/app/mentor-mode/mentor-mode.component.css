@@ -1,0 +1,14 @@
+#mContainer {
+    display: flex;
+    height: 100%;
+}
+
+#mLeft{
+    flex: 2;
+    background-color:darkslateblue;
+}
+
+#mRight{
+    flex:5;
+    background:dodgerblue;
+}

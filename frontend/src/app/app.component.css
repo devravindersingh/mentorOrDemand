@@ -1,0 +1,21 @@
+#container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#routesArea {
+    flex: 10;
+    background-color: brown;
+}
+
+#footerArea {
+    flex: 1;
+    background-color: black;
+}
+
+
+
+
+

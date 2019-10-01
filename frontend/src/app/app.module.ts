@@ -15,6 +15,11 @@ import { CoursesViewComponent } from './courses-view/courses-view.component';
 import { PaymentViewComponent } from './payment-view/payment-view.component';
 import { ProfileViewComponent } from './profile-view/profile-view.component';
 import { HomeViewComponent } from './home-view/home-view.component';
+import { SearchModeComponent } from './search-mode/search-mode.component';
+import { MentorListComponent } from './mentor-list/mentor-list.component';
+import { StudentListComponent } from './student-list/student-list.component';
+import { CourseListComponent } from './course-list/course-list.component';
+import { AdminModeComponent } from './admin-mode/admin-mode.component';
 
 const appRoutes:Routes = [
   {path:'', component: HomeViewComponent},
@@ -26,8 +31,13 @@ const appRoutes:Routes = [
   {path:'mentorRegister', component: MentorRegisterComponent},
   {path:'login', component: LoginComponent},
   {path:'courses', component: CoursesViewComponent},
-  {path:'payment', component: PaymentViewComponent},
-  {path:'profile', component: ProfileViewComponent}
+  {path:'studentPayment', component: PaymentViewComponent},
+  {path:'profile', component: ProfileViewComponent},
+  {path:'admin', component: AdminModeComponent},
+  {path:'adminCourseList', component: CourseListComponent},
+  {path:'adminMentorList', component: MentorListComponent},
+  {path:'adminStudentList', component: StudentListComponent},
+  {path:'searchStuff', component: SearchModeComponent}
 ]
 
 @NgModule({
@@ -43,7 +53,12 @@ const appRoutes:Routes = [
     CoursesViewComponent,
     PaymentViewComponent,
     ProfileViewComponent,
-    HomeViewComponent
+    HomeViewComponent,
+    SearchModeComponent,
+    MentorListComponent,
+    StudentListComponent,
+    CourseListComponent,
+    AdminModeComponent
   ],
   imports: [
     BrowserModule,
