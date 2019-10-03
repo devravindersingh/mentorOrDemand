@@ -1,23 +1,74 @@
 <div id="container">
     <div id="left">
-        <div id="welcomeText">
-                <h1 id="mainText">lorem ipsum</h1>
-                <p id="oneQuote">Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur</p>
+        <div id="welcomeText" style="font-family: 'Montserrat', sans-serif;">
+                <div style="display: flex; flex: 2">
+                    <div style="display: flex; margin-bottom: -1.5rem; flex: 5; justify-content: center; align-items: flex-end">
+                        <h1 style="font-size: 6em; font-weight: bolder">MENTORS</h1>
+                    </div>
+                    <div style="flex: 1;"></div>
+                </div>
+                <div style="display: flex; flex : 1 ;">
+                    <div style="flex: 1; display: flex; flex-direction: column">
+                        <div style="display: flex;flex: 4;justify-content: flex-end">
+                            <h1 style="line-height: 0.75em;">ON</h1>
+                        </div>
+                        <div style="flex: 1;"></div>
+                    </div> 
+                    <div style="flex: 2;">
+                        <h1 style="font-size: 5em; line-height: 0.75em;">DEMAND</h1>
+                    </div>   
+                </div>
+                <div style="flex: 3;">
+                    <p style="font-family: 'Quicksand', sans-serif; padding-left: 11%; padding-right: 10%; padding-top: -2%">"Knowledge is power. Information is liberating. 
+                        Education is the premise of progress, in every society, in every family." – 
+                        <span style="font-weight: 700">Kofi Annan</span>
+                    </p>
+                </div>
         </div>
         <div id="startGuestMode">
-            <button class="btn btn-success">Tech</button>
-            <button class="btn btn-success">TimeSlot</button>
-            <button class="btn btn-success">Search</button>
+            <div style="display: flex; justify-content: center; padding-bottom: 5%">
+                <button style="font-family: 'Quicksand', sans-serif; font-size: 1em;" class="btn btn-light">Explore Courses</button>
+            </div>
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap"> 
+                <h3 style="font-family: 'Quicksand', sans-serif; font-size: 2em">ANGULAR</h3>
+                <h3 style="font-family: 'Quicksand', sans-serif; font-size: 2em">MEAN STACK</h3>
+                <h3 style="font-family: 'Quicksand', sans-serif; font-size: 2em">.NET</h3>
+                <h3 style="font-family: 'Quicksand', sans-serif; font-size: 2em">JAVA  </h3>
+                <h3 style="font-family: 'Quicksand', sans-serif; font-size: 2em">FULL STACK WEB DEVELOPMENT</h3>
+            </div>
+            <div style="display: flex; justify-content: center">
+                <h3 style="font-family: 'Quicksand', sans-serif; font-size: 1em;">and many more</h3>
+            </div>
         </div>
     </div>
     <div id="right">
         <div id="startingSMode" [routerLink]="['student']">
-
+            <div style="flex: 2; display: flex; justify-content: flex-end; flex-direction: column">
+            <h1 style="font-family: 'Montserrat', sans-serif; font-size: 5em;font-weight: 700; line-height: 0.75em">I'M</h1>
+            </div>
+            <div style="flex: 1">
+                <h1 style="font-family: 'Montserrat', sans-serif; font-size: 5em;font-weight: 700; line-height: 0.75em;">HERE</h1>
+            </div>
+            <div style="flex: 1; margin-top: -1.4em; margin-left: 0.3em;">
+                <h1 style="font-family: 'Montserrat', sans-serif; font-size: 5em;font-weight: 700; line-height: 0.75em;">TO</h1>
+            </div>
+            <div style="flex: 3;margin-top: -1.4em; margin-left: 0.2em;">
+                <h1 style="font-family: 'Montserrat', sans-serif; font-size: 5em;font-weight: 700; line-height: 0.75em">LEARN</h1>
+            </div>
         </div>
         <div id="startingMMode" [routerLink]="['mentor']">
-
+                <div style="flex: 3; display: flex; justify-content: flex-end; flex-direction: column">
+                <h1 style="font-family: 'Montserrat', sans-serif; font-size: 5em;font-weight: 700; line-height: 0.75em">I'M</h1>
+                </div>
+                <div style="flex: 1">
+                    <h1 style="font-family: 'Montserrat', sans-serif; font-size: 5em;font-weight: 700; line-height: 0.75em;">HERE</h1>
+                </div>
+                <div style="flex: 1; margin-top: -1.4em; margin-left: 0.5em;">
+                    <h1 style="font-family: 'Montserrat', sans-serif; font-size: 5em;font-weight: 700; line-height: 0.75em;">TO</h1>
+                </div>
+                <div style="flex: 2; margin-top: -1.4em;  margin-left: 0.2em;">
+                    <h1 style="font-family: 'Montserrat', sans-serif; font-size: 5em;font-weight: 700; line-height: 0.75em">TEACH</h1>
+                </div>                
         </div>
     </div>
-
 </div>
-
