@@ -20,6 +20,8 @@ import { MentorListComponent } from './mentor-list/mentor-list.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { CourseListComponent } from './course-list/course-list.component';
 import { AdminModeComponent } from './admin-mode/admin-mode.component';
+import { MentorProfileComponent } from './mentor-profile/mentor-profile.component';
+import { SnavbarComponent } from './snavbar/snavbar.component';
 
 const appRoutes:Routes = [
   {path:'', component: HomeViewComponent},
@@ -32,12 +34,13 @@ const appRoutes:Routes = [
   {path:'login', component: LoginComponent},
   {path:'courses', component: CoursesViewComponent},
   {path:'studentPayment', component: PaymentViewComponent},
-  {path:'profile', component: ProfileViewComponent},
+  {path:'studentProfile', component: ProfileViewComponent},
   {path:'admin', component: AdminModeComponent},
   {path:'adminCourseList', component: CourseListComponent},
   {path:'adminMentorList', component: MentorListComponent},
   {path:'adminStudentList', component: StudentListComponent},
-  {path:'searchStuff', component: SearchModeComponent}
+  {path:'searchStuff', component: SearchModeComponent},
+  {path:'mentorProfile', component: MentorProfileComponent},
 ]
 
 @NgModule({
@@ -58,7 +61,9 @@ const appRoutes:Routes = [
     MentorListComponent,
     StudentListComponent,
     CourseListComponent,
-    AdminModeComponent
+    AdminModeComponent,
+    MentorProfileComponent,
+    SnavbarComponent
   ],
   imports: [
     BrowserModule,
