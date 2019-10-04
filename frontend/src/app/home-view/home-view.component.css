@@ -4,7 +4,7 @@
     height: 100%;
     background-color: white;
     flex-direction: row;
-    
+    flex-wrap: wrap;
 }
 
     #left{

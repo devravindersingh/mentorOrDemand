@@ -7,28 +7,26 @@ import { AppComponent } from './app.component';
 import { GuestModeComponent } from './guest-mode/guest-mode.component';
 import { StudentModeComponent } from './student-mode/student-mode.component';
 import { MentorModeComponent } from './mentor-mode/mentor-mode.component';
-import { FooterSectionComponent } from './footer-section/footer-section.component';
-import { StudentRegisterComponent } from './student-register/student-register.component';
-import { MentorRegisterComponent } from './mentor-register/mentor-register.component';
-import { LoginComponent } from './login/login.component';
-import { CoursesViewComponent } from './courses-view/courses-view.component';
+import { StudentRegisterComponent } from './student-mode/student-register/student-register.component';
+import { MentorRegisterComponent } from './mentor-mode/mentor-register/mentor-register.component';
+import { LoginComponent } from './student-mode/login/login.component';
+import { CoursesViewComponent } from './guest-mode/courses-view/courses-view.component';
 import { PaymentViewComponent } from './payment-view/payment-view.component';
-import { ProfileViewComponent } from './profile-view/profile-view.component';
+import { ProfileViewComponent } from './student-mode/profile-view/profile-view.component';
 import { HomeViewComponent } from './home-view/home-view.component';
-import { SearchModeComponent } from './search-mode/search-mode.component';
-import { MentorListComponent } from './mentor-list/mentor-list.component';
-import { StudentListComponent } from './student-list/student-list.component';
-import { CourseListComponent } from './course-list/course-list.component';
+import { SearchModeComponent } from './student-mode/search-mode/search-mode.component';
+import { MentorListComponent } from './admin-mode/mentor-list/mentor-list.component';
+import { StudentListComponent } from './admin-mode/student-list/student-list.component';
+import { CourseListComponent } from './admin-mode/course-list/course-list.component';
 import { AdminModeComponent } from './admin-mode/admin-mode.component';
-import { MentorProfileComponent } from './mentor-profile/mentor-profile.component';
-import { SnavbarComponent } from './snavbar/snavbar.component';
+import { MentorProfileComponent } from './mentor-mode/mentor-profile/mentor-profile.component';
+import { SnavbarComponent } from './student-mode/snavbar/snavbar.component';
 
 const appRoutes:Routes = [
   {path:'', component: HomeViewComponent},
   {path:'guest', component: GuestModeComponent},
   {path:'student', component: StudentModeComponent},
   {path:'mentor', component: MentorModeComponent},
-  {path:'footer', component: FooterSectionComponent},
   {path:'studentRegister', component: StudentRegisterComponent},
   {path:'mentorRegister', component: MentorRegisterComponent},
   {path:'login', component: LoginComponent},
@@ -49,7 +47,6 @@ const appRoutes:Routes = [
     GuestModeComponent,
     StudentModeComponent,
     MentorModeComponent,
-    FooterSectionComponent,
     StudentRegisterComponent,
     MentorRegisterComponent,
     LoginComponent,
