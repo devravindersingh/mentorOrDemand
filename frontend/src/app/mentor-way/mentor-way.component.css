@@ -1,0 +1,14 @@
+#sContainer {
+    display: flex;
+    height: 100%;
+}
+
+#sLeft{
+    flex: 2;
+    background-color: darkgoldenrod;
+}
+
+#sRight{
+    flex:5;
+    background-color: white
+}

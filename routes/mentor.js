@@ -1,9 +1,48 @@
 const express = require('express');
 const router = express.Router();
 const mentor = require('../models/mentor');
+const passport = require('passport');
+const jwt = require('jsonwebtoken');
+const config = require("../config/database");
+
 //login/authenticate
 router.get('/login',(req,res,next)=>{
-    res.send('authenticate');
+    const username = req.body.username;
+    const password = req.body.password;
+    
+    student.getMentorByUsername(username, (err, user)=> {
+        if(err) throw err;
+        if(!user){
+            console.log(user);
+            return res.json({
+                success: false,
+                msg : 'User not found',
+            })
+        }
+        mentor.comparePassword(password, user.password, (err, isMatch)=>{
+            if(err) throw err;
+            if(isMatch){
+                const token = jwt.sign(user.toJSON(), config.secret, {
+                    expiresIn: 14400 //4hours
+                })
+                res.json({
+                    success : true,
+                    token: 'JWT ' + token,
+                    user: {
+                        id: user._id,
+                        name: user.username,
+                        email: user.email
+                    }
+                });
+            }
+            else{
+                return res.json({
+                    success: false,
+                    msg: "wrong password"
+                })
+            }
+        })
+    })
 })
 
 //register
@@ -38,5 +77,6 @@ router.post('/register',(req,res,next)=>{
 router.get('/profile',(req,res,next)=>{
     res.send('profile');
 })
+
 
 module.exports = router;

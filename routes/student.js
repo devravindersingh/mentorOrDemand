@@ -78,10 +78,10 @@ router.get('/profile',passport.authenticate('jwt', {session: false}),(req,res,ne
     res.json({user: req.user});
 })
 
-//editing data
-router.get('/edit',(req,res,next)=>{
-    res.send('editdata');
-})
+// //editing data
+// router.get('/edit',(req,res,next)=>{
+//     res.send('editdata');
+// })
 
 //coursedetails  -- need technolgies id for display content
 router.get('/courseDetails',(req,res,next)=>{

@@ -1,0 +1,74 @@
+<div id="sContainer">
+    <div id="sLeft">
+
+    </div>
+    <div id="sRight" style="display: flex; justify-content: center; padding-top: 5%">
+        <div style="flex: 1; display: flex; flex-direction: column; background-color:white;">
+            <div style="flex: 2; display: flex; align-items: flex-end;">
+            <h1 style="font-size: 3em; font-family: 'Montserrat', sans-serif; padding-left: 10%">sign in</h1></div>
+            <div style="flex: 5; font-family: 'Quicksand', sans-serif; padding: 10%">
+                <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">email</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary" [routerLink]="['/mentor']">submit</button>
+                  </form>
+                  <!-- <router-outlet></router-outlet> -->
+            </div>
+        </div>
+        <div style="flex: 1; display: flex; flex-direction: column; background-color:white;">
+            <div style="flex: 2; display: flex; align-items: flex-end;">
+            <h1 style="font-size: 3em; font-family: 'Montserrat', sans-serif; padding-left: 10%">sign up</h1></div>
+            <div style="flex: 5; font-family: 'Quicksand', sans-serif; padding: 10%;">
+                <form (submit)="onRegisterSubmit()">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">email</label>
+                      <input type="email" [(ngModel)]="registerEmail" name="registerEmail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">password</label>
+                      <input type="password"  [(ngModel)]="registerPassword" name="registerPassword"  class="form-control" id="Password1" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">confirm-password</label>
+                        <input type="password"  [(ngModel)]="registerCPassword" name="registerCPasssword"  class="form-control" id="Password2" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                      <label for="firstnameInput">firstname</label>
+                      <input type="text" class="form-control" id="firstName" placeholder="your first name">
+                    </div>
+                    <div class="form-group">
+                        <label for="secondnameInput">secondname</label>
+                        <input type="text" class="form-control" id="secondName" placeholder="your second name">
+                    </div>
+                    <div class="form-group">
+                        <label for="MobileInput">contact number</label>
+                        <input type="number" class="form-control" id="contactNumber" placeholder="contact">
+                    </div>
+                    <div class="form-group">
+                        <label for="bioInput">Bio</label>
+                        <input type="text" class="form-control" id="descrp" placeholder="something about you">
+                    </div>
+                    <div class="form-group">
+                        <label for="exprInput">Years of experience</label>
+                        <input type="number" class="form-control" id="yearsofexprience" placeholder="experience">
+                      </div>
+                      <div class="form-group">
+                        <label for="linkedinInput">LinkedIn</label>
+                        <input type="text" class="form-control" id="linkedinprofile" placeholder="linkedIn Profile">
+                      </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <ng-flash-message></ng-flash-message>
+                  </form>
+            </div>
+        </div>
+    </div>
+</div>
+

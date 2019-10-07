@@ -1,8 +1,27 @@
-<div style="display: flex; height: 100%; flex-direction: column;">
-    <div style="flex: 1; display: flex">
-        <app-snavbar></app-snavbar>
-    </div> 
-    <div style="flex: 7; background-color: greenyellow ">
-        <router-outlet name="navbarContents"></router-outlet>
+
+<div style="display: flex; height: 100%; width: 100%; flex-direction: column">
+    <div style="display: flex; flex: 2; background-color: white; flex-direction: column; padding: 3%; padding-bottom: 0%">
+        <h1 style="font-family: 'Montserrat', sans-serif;">username</h1>
+        <p style="font-family: 'QuickSand', sans-serif;">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+             Accusantium aliquid, ab, corporis assumenda sit expedita 
+             officiis sed eius asperiores, in harum tenetur commodi 
+             ea modi deserunt velit totam eos soluta!
+        </p>
+    </div>
+    <div style="display: flex; flex: 9; flex-direction: column;">
+        <div style="display: flex; flex: 1; font-family: 'Montserrat', 'sans-serif';">
+            <div style="display: flex; flex: 1;justify-content: flex-end; padding-right: 3%">
+                <h2 [routerLink]="['/student/studentSearch']">mycourses</h2>
+            </div>
+            <div style="display: flex; flex: 1;justify-content: flex-start; padding-left: 1%">
+                <h2>requested courses</h2>
+            </div>
+        </div>
+        <div style="overflow: auto; flex: 7;">
+            <div style="height: 100%; border-radius: 10px;background-color: tomato; margin: 1% 2% 0% 2%">
+                    <router-outlet></router-outlet>
+            </div>
+        </div>
+
     </div>
 </div>
